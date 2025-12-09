@@ -37,6 +37,8 @@ payload = pickle.dumps((encrypted_key, iv, encrypted_message))
 
 # 5. Send via socket
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect(("158.223.122.68", 65432))
+    s.connect(("172.25.128.75", 65432))
     s.sendall(payload)
     print("✅ Encrypted message sent!")
+
+    

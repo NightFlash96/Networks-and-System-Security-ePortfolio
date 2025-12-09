@@ -11,7 +11,7 @@ with open("private_key.pem", "rb") as f:
 
 # Start server
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
-    server.bind(("localhost", 65432))
+    server.bind(("0.0.0.0", 65432))
     server.listen()
     print("Waiting for connection...")
     connection, address = server.accept()
